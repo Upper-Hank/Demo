@@ -5,13 +5,34 @@
     overflow: hidden;
     font-size: 8px;
     font-family: Helvetica, sans-serif;
+    --bg-color: #ffb514;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     height: 100vh;
-    background: #ffb514;
+    background: var(--bg-color);
     user-select: none;
 }
 
