@@ -7,11 +7,24 @@ main {
 }
 
 .btn {
-    background-color: transparent;
-    padding: 14px 28px;
-    border: 1px solid #000000;
+    background-color: rgba(0, 0, 0);
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    border: none;
+    outline: 2px solid rgba(0, 0, 0);
+    outline-offset: 3px;
     cursor: pointer;
-    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(0.9);
 }
 
 .circle-container {
