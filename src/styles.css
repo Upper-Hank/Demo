@@ -1,0 +1,84 @@
+:root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 8px;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: #ffb514;
+    user-select: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    grid-column: 2 / 8;
+    grid-row: 2 / 6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .number {
+    height: 25%;
+    width: 100%;
+    font: 600 4rem Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .name {
+    height: 50%;
+    width: 100%;
+    font: 800 8rem Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .information {
+    height: 25%;
+    width: 100%;
+    font: 100 1.5rem Helvetica, sans-serif;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+main {
+    grid-column: 2 / 8;
+    grid-row: 6 / 12;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer {
+    grid-column: 2 / 8;
+    grid-row: 12 / 13;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font: 300 1rem Helvetica, sans-serif;
+}

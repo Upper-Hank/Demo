@@ -1,0 +1,128 @@
+main div[class|="type"] {
+    width: 100%;
+    height: 30%;
+}
+
+.content-container {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.intro {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowarp;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.intro .title {
+    font: 800 2rem Helvetica, sans-serif;
+}
+
+.intro .description {
+    font: 200 1.5rem Helvetica, sans-serif;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+/* type-1的实现 */
+.type-1 .content-container {
+    width: 200%;
+    flex-direction: row;
+    flex-wrap: nowarp;
+    align-items: center;
+    justify-content: center;
+    animation: marquee-1 10s linear infinite, fadeIn 1s ease-in-out;
+}
+
+@keyframes marquee-1 {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.type-1 .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowarp;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-1 .content span.question {
+    font: 600 1.8rem Helvetica, sans-serif;
+    padding: 0 6rem;
+}
+.type-1 .content span.answer {
+    font: 300 1.8rem Helvetica, sans-serif;
+}
+
+/* type-2的实现 */
+.type-2 .content-container {
+    display: block;
+    position: relative;
+}
+
+.type-2 [class$="content"] {
+    position: absolute;
+    top: 50%;
+    right: -8%;
+    transform: translateY(-50%);
+    width: 8%;
+    font: 800 1.8rem Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: marquee-2 8s linear infinite, fadeIn 1s ease-in-out; 
+}
+
+@keyframes marquee-2 {
+    0% {
+        right:-8%
+    }
+    100% {
+        right:108%;
+    }
+}
+
+.type-2 .one-content {
+    animation-delay: 0;
+}
+.type-2 .two-content {
+    animation-delay: 1s;
+}
+.type-2 .three-content {
+    animation-delay: 2s;
+}
+.type-2 .four-content {
+    animation-delay: 3s;
+}
+.type-2 .five-content {
+    animation-delay: 4s;
+}
+.type-2 .six-content {
+    animation-delay: 5s;
+}
+.type-2 .seven-content {
+    animation-delay: 6s;
+}
+.type-2 .eight-content {
+    animation-delay: 7s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
