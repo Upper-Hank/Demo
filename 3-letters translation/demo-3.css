@@ -44,14 +44,9 @@ main {
     font-size: 4rem;
     font-weight: bold;
     flex-direction: column;
-    transition: all 0.5s ease-in-out;
 }
 .type {
     height: 100%;
-}
-
-.letter:hover {
-    transform: translateY(-50%);
 }
 
 .letter-top,
@@ -62,3 +57,63 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+/* type-1的实现 */
+.type-1 {
+    transition: all 0.5s ease-in-out;
+}
+.type-1:hover {
+    transform: translateY(-50%);
+}
+
+/* type-2的实现 */
+.type-2 {
+    transition: all 0.5s ease-in-out;
+}
+
+.type-2 .letter-top,
+.type-2 .letter-bottom {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+}
+/* 这里Y轴-50%是为了让无高度的bottom能紧贴top，flex的布局会使得bottom位于原本位置的中间 */
+.type-2 .letter-bottom {
+    transform: translateY(-50%) rotateX(-90deg);
+}
+
+.type-2:hover .letter-top {
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.type-2:hover .letter-bottom {
+    transform: translateY(-100%) rotateX(0);
+}
+
+/* type-3的实现 */
+/* 原本的远去褪去，新的从下面升上来 */
+.type-3 {
+    transition: all 0.5s ease-in-out;
+}
+
+.type-3 .letter-top,
+.type-3 .letter-bottom {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+}
+
+.type-3 .letter-bottom {
+    opacity: 0;
+}
+
+.type-3:hover .letter-top {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.type-3:hover .letter-bottom {
+    opacity: 1;
+    transform: translateY(-100%) rotateX(0);
+}
+
+
+
