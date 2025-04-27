@@ -103,3 +103,69 @@ footer {
     justify-content: center;
     font: 300 1rem Helvetica, sans-serif;
 }
+
+@media screen and (max-width: 900px) and (min-width: 600px){
+    header, main, footer {
+        display:none;
+    }
+    
+    body::after {
+        content: "This demo is optimized for larger screens\A For the best experience, please view it on a computer or tablet in landscape mode";
+        display: block;
+        position: absolute;
+        white-space: pre;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+        line-height: 200%;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) and (min-width: 300px){
+    header, main, footer {
+        display:none;
+    }
+    
+    body::after {
+        content: "Sorry\A This demo without RWD";
+        display: block;
+        position: absolute;
+        white-space: pre;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        font-size: clamp(2rem, 4vw, 6rem);
+        line-height: 200%;
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 300px){
+    header, main, footer {
+        display:none;
+    }
+    
+    body::after {
+        content: "???\A What device are you using\A (´･ω･`)";
+        display: block;
+        position: absolute;
+        white-space: pre;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        font-size: clamp(2rem, 4vw, 6rem);
+        line-height: 200%;
+        padding: 20px;
+    }
+
+}
