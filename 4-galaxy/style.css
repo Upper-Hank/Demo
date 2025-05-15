@@ -1,7 +1,15 @@
-.galaxy {
+main {
   position: relative;
+}
+
+.base,
+.galaxy {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+  transform-style: preserve-3d;
 }
 
 .sun {
@@ -22,6 +30,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .orbit-container {
@@ -29,4 +38,5 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
