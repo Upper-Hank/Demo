@@ -1,0 +1,51 @@
+/* 亮暗模式切换样式 */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+}
+
+[data-theme="dark"] {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* 切换按钮样式 */
+#toggle {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+}
+
+#toggle:checked+.btn {
+  background: #4CAF50;
+}
+
+#toggle:checked+.btn::after {
+  left: 32px;
+}
